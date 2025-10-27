@@ -5,7 +5,7 @@
     .stats-widget {
       max-width: 100%;
       margin: 0 auto;
-      padding: 5px; /* Уменьшил для мобильных */
+      padding: 5px;
       background: #ffffff !important;
       border-radius: 8px;
       font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
@@ -35,21 +35,21 @@
     .stat-label { font-size: 16px; color: #666; }
     @media (max-width: 768px) { /* Мобильная версия */
       .stats-widget {
-        padding: 3px; /* Ещё меньше */
-        min-height: 100px; /* Компактнее */
+        padding: 3px;
+        min-height: 100px;
       }
-      .stat-number { font-size: 20px; } /* Уменьшаем для влезания */
-      .stat-label { font-size: 12px; } /* Уменьшаем */
+      .stat-number { font-size: 20px; }
+      .stat-label { font-size: 12px; }
       .stat-item {
         padding: 5px;
-        margin: 0 2px; /* Ещё меньше отступы */
+        margin: 0 5px; /* Увеличил с 2px до 5px */
         border: 1px solid #022e54;
         border-radius: 8px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        min-height: 70px; /* Достаточно для текста */
+        min-height: 70px;
       }
     }
-    @media (max-width: 480px) { /* Для очень узких экранов */
+    @media (max-width: 480px) { /* Очень узкие экраны */
       .stats-widget {
         padding: 2px;
         min-height: 90px;
@@ -58,7 +58,7 @@
       .stat-label { font-size: 10px; }
       .stat-item {
         padding: 3px;
-        margin: 0 1px;
+        margin: 0 3px; /* Увеличил с 1px до 3px */
         min-height: 60px;
       }
     }

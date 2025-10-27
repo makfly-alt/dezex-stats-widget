@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .stats-widget {max-width:100%;margin:0 auto;padding:10px;background:#f7f7f8;border-radius:8px;font-family:'Montserrat','Roboto',Arial,sans-serif;color:#022e54;display:flex;justify-content:space-around;text-align:center;min-height:150px;}
+    .stat-item {padding:10px;}
+    .stat-number {font-size:24px;font-weight:700;color:#022e54;}
+    .stat-label {font-size:12px;color:#666;}
+  </style>
+</head>
+<body>
+  <div class="stats-widget" id="statsContainer">
+    <div class="stat-item"><div class="stat-number" data-target="2896">0</div><div class="stat-label">Юр. и физ. лиц — клиентов</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="15">0</div><div class="stat-label">Лет успешной работы</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="270">0</div><div class="stat-label">Выездов ежемесячно</div></div>
+  </div>
+  <script>
+    function animateValue(e,s,t,d){let r=s,c=(t-s)/d*16;function n(){r+=c,e.textContent=Math.floor(r),r<t?setTimeout(n,16):e.textContent=t}setTimeout(n,16)}
+    function animateStats(){document.querySelectorAll('.stat-number').forEach(e=>{let t=parseInt(e.getAttribute('data-target'));animateValue(e,0,t,2000)})}
+    window.onload=animateStats;
+  </script>
+</body>
+</html>

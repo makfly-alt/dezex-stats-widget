@@ -2,10 +2,35 @@
 <html>
 <head>
   <style>
-    .stats-widget {max-width:100%;margin:0 auto;padding:10px;background:#ffffff;border-radius:8px;font-family:'Montserrat','Roboto',Arial,sans-serif;color:#022e54;display:flex;justify-content:space-around;text-align:center;min-height:150px;}
-    .stat-item {padding:10px;}
-    .stat-number {font-size:24px;font-weight:700;color:#022e54;}
-    .stat-label {font-size:12px;color:#666;}
+    .stats-widget {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      background: #ffffff !important;
+      border-radius: 8px;
+      font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+      color: #022e54;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+    .stats-widget * {
+      background: #ffffff !important;
+    }
+    .stat-item { padding: 10px; }
+    .stat-number { font-size: 32px; font-weight: 700; color: #022e54; }
+    .stat-label { font-size: 16px; color: #666; }
+    @media (max-width: 768px) { /* Мобильная версия */
+      .stats-widget {
+        background: #ffffff !important;
+        min-height: 120px; /* Уменьшаем высоту для компактности */
+      }
+      .stat-number { font-size: 24px; }
+      .stat-label { font-size: 14px; }
+      .stat-item { padding: 5px; } /* Уменьшаем отступы */
+    }
   </style>
 </head>
 <body>
